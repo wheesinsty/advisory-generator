@@ -1,0 +1,6 @@
+pytest-playwright
+pandas
+python-docx
+os
+urllib3
+pillow
