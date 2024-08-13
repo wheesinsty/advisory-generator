@@ -2,20 +2,22 @@ import playwright
 from playwright.sync_api import sync_playwright
 import pandas as pd
 import os
+import datetime
 
 # opens the excel sheets to obtain the name and the scores
 def openExcel():
     return pd.read_excel("C:/Users/" + os.getenv('USERNAME') + "/Documents/AdvisoryAutomate/test.xlsx", sheet_name = "Report status"), pd.read_excel("C:/Users/" + os.getenv('USERNAME') + "/Documents/AdvisoryAutomate/test.xlsx", sheet_name = "Adoption score", index_col = 0)
 
-# reports any errors
-def reportError(msg):
-    # report error to excel sheet
-    scoreSheet.loc[client, "Error"] = scoreSheet.loc[client, "Error"] + "\n " + msg
+# reports errors to excel sheet
+def reportError(company, msg):
+    if 'Error' not in scoreSheet.columns:
+        scoreSheet['Error'] = ''
+    scoreSheet.loc[company, "Error"] = msg
     with pd.ExcelWriter("test.xlsx", engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
-        scoreSheet.to_excel(writer, sheet_name='Adoption score', index=False)
+        scoreSheet.to_excel(writer, sheet_name='Adoption score')
 
 # goes to the client's admin centre
-def goToTenant(companiesSheet, client) -> bool:
+def goToTenant(companiesSheet, client, company) -> bool:
     
     # goes to the customer list
     page.goto("https://partner.microsoft.com/dashboard/v2/customers/list")
@@ -36,7 +38,7 @@ def goToTenant(companiesSheet, client) -> bool:
         page.locator('//*[@id="MicrosoftOffice"]').click()
         page.wait_for_timeout(5000)
     except:
-        reportError("No admin permissions")
+        reportError(company, "No admin permissions")
         return True
 
     return False
@@ -50,6 +52,7 @@ def getScores(company, scores):
     
     # extracts "Total score"
     scoreSheet.loc[company, 'Total score'] = page.get_by_text("Total score:").all_text_contents()[0][-14:-7]
+    page.set_default_timeout(5000)
     
     # extracts everything else
     for link in range(len(scores)):
@@ -65,12 +68,15 @@ def getScores(company, scores):
                 scoreSheet.loc[company, scores[link]] = '--'
     print(scoreSheet)
     with pd.ExcelWriter("test.xlsx", engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
-        scoreSheet.to_excel(writer, sheet_name='Adoption score', index=False)
+        scoreSheet.to_excel(writer, sheet_name='Adoption score')
                                                            
 companiesSheet, scoreSheet = openExcel()
 
 # list of scores to extract
 scores = ['Communication', 'Meetings', 'Content collaboration', 'Teamwork', 'Mobility', 'AI assistance', 'Endpoint analytics',	'Network connectivity', 'Microsoft 365 Apps Health']
+
+# display program start time
+print("Program start time: " + str(datetime.datetime.now().strftime("%H:%M:%S")))
 
 for client in range(len(companiesSheet["Domain"])): # client is a number
     
@@ -86,10 +92,10 @@ for client in range(len(companiesSheet["Domain"])): # client is a number
         page = default_context.pages[0]
         
         # goes to the client's admin centre
-        if goToTenant(companiesSheet, client): continue
+        if goToTenant(companiesSheet, client, company): continue
         
         # extracts the scores
         getScores(company, scores)
     
-with pd.ExcelWriter("test.xlsx", engine='openpyxl', mode='a', if_sheet_exists='replace') as writer:
-    scoreSheet.to_excel(writer, sheet_name='Adoption score', index=False)
+# display program end time
+print("Program end time: " + str(datetime.datetime.now().strftime("%H:%M:%S")))      
