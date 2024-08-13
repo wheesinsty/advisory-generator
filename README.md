@@ -16,14 +16,14 @@ To use this software, ensure that
 4. Right click the Google Chrome app and select **Properties**. Then, set the **Target:** to
 `"C:\ProgramFiles\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222`. 
 5. Check that the repository is in the Downloads folder, then navigate to this directory in your terminal by entering (replace YOURNAME with the name of your Windows username)
-`C:/Users/YOURNAME(SUPERHU/Downloads/AdvisoryAutomate/`
+`cd [path to your directory]`
 6. Install the necessary dependencies with
 `pip install -r requirements.txt` 
 7. Ensure that the excel sheet is called **test**and the advisory template is a Microsoft document called **Advisory_OnePage**                            
 
 ## Run the projects
 1. Open terminal and nsure that you are in the correct directory (replace YOURNAME with the name of your Windows username)
-`cd [YOUR DIRECTORY]`
+`cd [path to your directory]`
 2. Run the file you want
 `python filename`
 
