@@ -1,5 +1,5 @@
 # One Page Advisory Generator 
-This is a project that automatically generates the one page advisories made for Herman and Clarice of the Superhub Cloud Operation Team.
+This is a project that automatically generates the one page advisories is made for my team during my internship.
 
 The scraping module used is Playwright. The reason for using Playwright is because by the time I realised that Playwright is mainly used for testing, the project was already finished. 
 
@@ -36,4 +36,4 @@ Potential issues and how to resolve them:
     How to resolve: Ensure that the advisory template and the excel sheets are closed.
 
 ## Credits
-Thank you to Herman and Clarice for giving me this opportunity and for helping me along the way :`)`
+Thank you to my team for giving me this opportunity and for helping me along the way :`)`
