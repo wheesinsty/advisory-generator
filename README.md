@@ -21,12 +21,10 @@ To use this software, ensure that
 `pip install -r requirements.txt` 
 7. Ensure that the excel sheet is called **test**and the advisory template is a Microsoft document called **Advisory_OnePage**                            
 
-## Install the project
-1. Ensure that you are in the AdvisoryAutomate directory (replace YOURNAME with the name of your Windows username)
-`C:/Users/YOURNAME(SUPERHU/Downloads/AdvisoryAutomate/`
-2. Install the project
-`python automate.py install`
-3. Run the project
+## Run the projects
+1. Open terminal and nsure that you are in the correct directory (replace YOURNAME with the name of your Windows username)
+`cd [YOUR DIRECTORY]`
+2. Run the file you want
 `python filename`
 
 ## Project doesn't work?
