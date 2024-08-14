@@ -1,10 +1,10 @@
 # One Page Advisory Generator and Adoption Score Scraper
-This is a project that automatically generates the one page advisories and scrapes adoption scores from Microsoft Admin Center. It is made for my team during my internship.
+This is a project that automatically generates one page advisories and scrapes adoption scores from Microsoft Admin Center. It is made for my team during my internship.
 
 The scraping module used is Playwright. The reason for using Playwright is because by the time I realised that Playwright is mainly used for testing, the project was already finished. 
 
-The file `automate.py` generates the advisories.
-The file `scores.py` scrapes adoption scores.
+The file `automate.py` generates advisories.
+The file `scores.py` scrapes adoption scores into `test.xlsx`.
 
 ## Set-up
 To use this software, ensure that 
