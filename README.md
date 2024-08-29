@@ -16,27 +16,32 @@ To use this software, ensure that
 `git clone https://github.com/wheesinsty/one-page-advisory-generator.git`
                                                                                       
 4. Right click the Google Chrome app and select **Properties**. Then, set the **Target:** to
-`"C:\ProgramFiles\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222`.
+   ```bash
+   C:\ProgramFiles\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222
 
-5. Check that the repository is in the Downloads folder, then navigate to this directory in your terminal by entering (replace YOURNAME with the name of your Windows username)
-`cd [path]`
+6. Check that the repository is in the Downloads folder, then navigate to this directory in your terminal by entering 
+   ```bash
+   cd [path]
 
-6. Install the necessary dependencies with
-`pip install -r requirements.txt`
+8. Install the necessary dependencies with
+   ```bash
+   pip install -r requirements.txt
                      
 
 ## Run the projects
 1. Open terminal and navigate to the directory
-`cd [path]`
+   ```bash
+   cd [path]
 
 2. Run the file 
-`python advisory.py`
+   ```bash
+   python advisory.py
 
-3. Enter the path to the excel sheet
+4. Enter the path to the excel sheet
 
-4. Enter the path for the generated reports
+5. Enter the path for the generated reports
 
-5. If you want to start generating reports from scratch, enter "yes"
+6. If you want to start generating reports from scratch, enter "yes"
 
 ## Project doesn't work?
 Potential issues and how to resolve them:
