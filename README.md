@@ -1,4 +1,4 @@
-# One Page Advisory Generator and Adoption Score Scraper
+# One Page Advisory Generator
 This is a project that automatically generates one page advisories and scrapes adoption scores from Microsoft Admin Center. It is made for my team during my internship.
 
 The scraping module used is Playwright. The reason for using Playwright is because by the time I realised that Playwright is mainly used for testing, the project was already finished. 
@@ -23,15 +23,20 @@ To use this software, ensure that
 
 6. Install the necessary dependencies with
 `pip install -r requirements.txt`
-
-7. Ensure that the excel sheet is called **test**and the advisory template is a Microsoft document called **Advisory_OnePage**                            
+                     
 
 ## Run the projects
 1. Open terminal and navigate to the directory
 `cd [path]`
 
-3. Run the file you want
+2. Run the file 
 `python advisory.py`
+
+3. Enter the path to the excel sheet
+
+4. Enter the path for the generated reports
+
+5. If you want to start generating reports from scratch, enter "yes"
 
 ## Project doesn't work?
 Potential issues and how to resolve them:
