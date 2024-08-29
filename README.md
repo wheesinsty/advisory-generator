@@ -9,23 +9,23 @@ The file `scores.py` scrapes adoption scores into the excel sheet.
 ## Set-up
 To use this software, ensure that 
 1. Install python from the internet
-2. 
-3. In your terminal, install pip with
+   
+2. In your terminal, install pip with
 `python -m ensurepip --upgrade`
 
-5. Clone this repository with
+3. Clone this repository with
 `git clone https://github.com/wheesinsty/one-page-advisory-generator.git`
                                                                                       
-7. Right click the Google Chrome app and select **Properties**. Then, set the **Target:** to
+4. Right click the Google Chrome app and select **Properties**. Then, set the **Target:** to
 `"C:\ProgramFiles\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222`.
 
-9. Check that the repository is in the Downloads folder, then navigate to this directory in your terminal by entering (replace YOURNAME with the name of your Windows username)
+5. Check that the repository is in the Downloads folder, then navigate to this directory in your terminal by entering (replace YOURNAME with the name of your Windows username)
 `cd [path]`
 
-11. Install the necessary dependencies with
+6. Install the necessary dependencies with
 `pip install -r requirements.txt`
 
-13. Ensure that the excel sheet is called **test**and the advisory template is a Microsoft document called **Advisory_OnePage**                            
+7. Ensure that the excel sheet is called **test**and the advisory template is a Microsoft document called **Advisory_OnePage**                            
 
 ## Run the projects
 1. Open terminal and navigate to the directory
