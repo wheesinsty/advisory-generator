@@ -7,7 +7,7 @@ The file `automate.py` generates advisories and reports the status into an excel
 
 ## Set-up
 To use this software, ensure that 
-1. Install python from the internet
+1. Install `python` and `git` from the internet
    
 2. In your terminal, install pip with
 `python -m ensurepip --upgrade`
