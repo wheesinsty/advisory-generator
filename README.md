@@ -10,12 +10,14 @@ To use this software, ensure that
 1. Install `python` and `git` from the internet
    
 2. In your terminal, install pip with
-`python -m ensurepip --upgrade`
+   ```
+   python -m ensurepip --upgrade
 
-3. Clone this repository with
-`git clone https://github.com/wheesinsty/one-page-advisory-generator.git`
+4. Clone this repository with
+   ```bash
+   git clone https://github.com/wheesinsty/one-page-advisory-generator.git
                                                                                       
-4. Right click the Google Chrome app and select **Properties**. Then, set the **Target:** to
+5. Right click the Google Chrome app and select **Properties**. Then, set the **Target:** to
    ```bash
    C:\ProgramFiles\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222
 
