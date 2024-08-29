@@ -3,8 +3,8 @@ This is a project that automatically generates one page advisories and scrapes a
 
 The scraping module used is Playwright. The reason for using Playwright is because by the time I realised that Playwright is mainly used for testing, the project was already finished. 
 
-The file `automate.py` generates advisories.
-The file `scores.py` scrapes adoption scores into `test.xlsx`.
+The file `automate.py` generates advisories and reports the status into the excel sheet.
+The file `scores.py` scrapes adoption scores into the excel sheet.
 
 ## Set-up
 To use this software, ensure that 
@@ -12,20 +12,20 @@ To use this software, ensure that
 2. In your terminal, install pip with
 `python -m ensurepip --upgrade`
 3. Clone this repository with
-`git clone https://github.com/wheesinsty/advisory-generator.git`                                                                                             
+`git clone https://github.com/wheesinsty/one-page-advisory-generator.git`                                                                                             
 4. Right click the Google Chrome app and select **Properties**. Then, set the **Target:** to
 `"C:\ProgramFiles\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222`. 
 5. Check that the repository is in the Downloads folder, then navigate to this directory in your terminal by entering (replace YOURNAME with the name of your Windows username)
-`cd [path to your directory]`
+`cd [path]`
 6. Install the necessary dependencies with
 `pip install -r requirements.txt` 
 7. Ensure that the excel sheet is called **test**and the advisory template is a Microsoft document called **Advisory_OnePage**                            
 
 ## Run the projects
-1. Open terminal and nsure that you are in the correct directory (replace YOURNAME with the name of your Windows username)
-`cd [path to your directory]`
+1. Open terminal and navigate to the directory
+`cd [path]`
 2. Run the file you want
-`python filename`
+`python advisory.py`
 
 ## Project doesn't work?
 Potential issues and how to resolve them:
