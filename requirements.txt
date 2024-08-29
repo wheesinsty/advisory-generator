@@ -1,6 +1,5 @@
-pytest-playwright
-pandas
+playwright
 python-docx
-os
-urllib3
-pillow
+pandas
+Pillow
+docx2pdf
