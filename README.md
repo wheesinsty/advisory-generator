@@ -4,7 +4,6 @@ This is a project that automatically generates one page advisories and scrapes a
 The scraping module used is Playwright. The reason for using Playwright is because by the time I realised that Playwright is mainly used for testing, the project was already finished. 
 
 The file `automate.py` generates advisories and reports the status into the excel sheet.
-The file `scores.py` scrapes adoption scores into the excel sheet.
 
 ## Set-up
 To use this software, ensure that 
